@@ -1,0 +1,41 @@
+body{
+    font-family: "prompt";
+}
+.form-control:focus ,
+.form-select:focus 
+{
+      box-shadow: none;
+      border-color: darkcyan !important;
+}
+.fa-trash-can:hover ,
+.fa-pen-to-square:hover{
+    animation: fa-shake 2s linear;
+}
+.img-product{
+    height: 150px;
+}
+.searchpro{
+    width: 90%;
+    margin-inline: auto;
+    
+}
+.form-control.is-invalid:focus{
+    box-shadow: none;
+    --bs-border-width: 2px;
+    border-color: red !important;
+}
+.form-control.is-valid:focus{
+    box-shadow: none;
+    --bs-border-width: 2px;
+    border-color: green !important;
+}
+.form-select.is-valid:focus{
+    box-shadow: none;
+    --bs-border-width: 2px;
+    border-color: green !important
+}
+.form-select.is-invalid:focus{
+    box-shadow: none;
+    --bs-border-width: 2px;
+    border-color: red !important
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&family=Amatic+SC:wght@400;700&family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Salsa&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+<div class="w-75 mx-auto py-5">
+    <div class="form-floating mb-3">
+        <input oninput="validateInputs(this)" type="text" class="form-control border-0 border-bottom rounded-0" id="productName" placeholder="name@example.com">
+       <p class="text-danger pt-2 ps-1 d-none">product name must start with capital letter followed by at least two letter</p>
+        <label for="productName">Product Name</label>
+      </div>
+    <div class="form-floating mb-3">
+        <input oninput="validateInputs(this)" type="number" class="form-control border-0 border-bottom rounded-0" id="productPrice" placeholder="name@example.com">
+        <p class="text-danger ps-1 pt-2 d-none">product price must be greater than zero</p>
+        <label for="productPrice">product Price</label>
+      </div>
+      <div class="form-floating mb-3">
+        <select oninput="validateInputs(this)" class="form-select border-0 border-bottom rounded-0 " id="productCategory" aria-label="Floating label select example">
+          <option id="categorySelectedOption"  selected disabled hidden>Choose product Category</option>
+          <option>Mobile Phone</option>
+          <option>Labtop</option>
+          <option>Camera</option>
+          <option>Printer</option>
+          <option>TV</option>
+        </select>
+        <p class="text-danger pt-2 ps-1 d-none">please choose product category</p>
+        <label for="productCategory">product Category</label>
+      </div>
+    <div class="form-floating mb-3">
+        <textarea oninput="validateInputs(this)" class="form-control border-0 border-bottom rounded-0" id="productDescription" placeholder="name@example.com"></Textarea>
+          <p class="text-danger pt-2 ps-1 d-none">please enter product Description</p>
+          <label for="productDescription">product Description</label>
+      </div>
+      <div class="form-floating mb-3">
+        <input  type="file" class="form-control border-0 border-bottom rounded-0" id="productImage" placeholder="name@example.com">
+        <p class="text-danger pt-2 ps-1 d-none">please choose product image</p>
+        <label for="productImage">product Image</label>
+      </div>
+      <button id="AddProductButton" onclick="addProduct()" type="button" class="btn btn-info text-light my-2 d-block">Add Product</button>
+      <button id="UpdateProductButton" onclick="UpdateProduct()" type="button" class="btn btn-danger text-light my-2 d-none">Update Product</button>
+</div>
+<section class="container">
+  <input oninput="searchProducts(this.value)" type="search" class="form-control  mx-auto border-2 mb-5 rounded-0" placeholder="search for a product">
+  <div id="productContainerElement" class="row row-cols-2 row-cols-md-3 g-2 row-cols-lg-4 row-cols-xl-5">
+    <div class="col">
+      <!-- <div class="border shadow-sm p-2">
+          <div class="img-product mb-3">
+            <img src="./Project Data/images/Apple iPhone 13.jpg" class="w-100 h-100 object-fit-contain" alt="">
+          </div>
+          <h3 class="fs-5">Lorem, ipsum.</h3>
+          <p class="fs-6 text-secondary">Lorem ipsum dolor sit amet.</p>
+          <p><span class="fw-semibold">category: </span> mobile phone </p>
+         <div class="d-flex justify-content-between" >
+          <p class="fw-semibold">1500 EGP</p>
+          <div>
+            <i class="fa-solid fa-trash-can fs-5 text-danger"></i>
+            <i class="fa-solid fa-pen-to-square fs-5 text-success"></i>
+          </div>
+         </div>
+      </div> -->
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<script src="./js/bootstrap.bundle.min.js"></script>
+<script src="js/index.js"></script>
+</body>
+</html>
